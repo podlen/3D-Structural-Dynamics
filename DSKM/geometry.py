@@ -93,6 +93,8 @@ class Part:
         """
         Določi material, prerez, tip elementa (nosilec ali palica) in v_up izbranim linijam.
         """
+        if isinstance(line_ids, int):
+            line_ids = [line_ids]
         for lid in line_ids:
             self.properties[lid] = {
                 'material': material, 
